@@ -10,7 +10,7 @@ services:
       sh -c "python3 manage.py migrate &&
             python3 manage.py runserver 0.0.0.0:8000"
     volumes:
-      - ./../app
+      - ./:/app
       - my_media:/files/media
     depends_on:
       - db
